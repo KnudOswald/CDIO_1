@@ -27,9 +27,6 @@ class DiceRoll {
             int dice2 = rand.nextInt(6) + 1;
             System.out.println("du har scoret: " + dice2);
 
-            dice1 = 1;
-            dice2 = 1;
-
             int sum = dice1 + dice2;
 
             // System.out.println("summet er: " + sum);
