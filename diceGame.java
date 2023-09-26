@@ -15,6 +15,12 @@ class DiceRoll {
         System.out.println("tryk på enter");
         s.nextLine();
 
+        System.out.println("indtast dit navn player1");
+        String navn1 = s.nextLine();
+
+        System.out.println("indtast dit navn player 2");
+        String navn2 = s.nextLine();
+
         while (player1 < 40 && player2 < 40) {
             System.out.println("det er player" + turn + " s tur");
 
@@ -58,9 +64,9 @@ class DiceRoll {
 
             }
             if (player1 >= 40) {
-                System.out.println("player1 er vundet");
+                System.out.println("player1 er vundet " + navn1);
             } else if (player2 >= 40) {
-                System.out.println("player2 er vundet");
+                System.out.println("player2 er vundet " + navn2);
             } // udråber vineren.
 
         }
