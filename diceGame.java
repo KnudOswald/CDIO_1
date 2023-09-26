@@ -23,9 +23,11 @@ class DiceRoll {
 
             int dice1 = rand.nextInt(6) + 1;
             System.out.println("du har scoret: " + dice1);
+            // programmet vælger et tilfældige tal som er melle 1 og 6
 
             int dice2 = rand.nextInt(6) + 1;
             System.out.println("du har scoret: " + dice2);
+            // programmet vælger et tilfældige tal som er melle 1 og 6
 
             int sum = dice1 + dice2;
 
@@ -34,17 +36,17 @@ class DiceRoll {
             if (!(dice1 == 6 && dice2 == 6)) {
                 if (turn == 1) {
                     if (dice1 == 1 && dice2 == 1) {
-                        sum = 0;
+                        sum = 0; // nulstiller pointerne.
                         System.out.println("du har mistede alt dit pointer");
                         turn = 2;
                     } else {
                         turn = 2;
                     }
-                    player1 += sum;
+                    player1 += sum; // summer pointerne.
                     System.out.println(" du har: " + player1 + "pionte");
                 } else {
                     if (dice1 == 1 && dice2 == 1) {
-                        sum = 0;
+                        sum = 0; // nulstiller pionterne.
                         System.out.println("du har mistede alt dit pointer");
                         turn = 1;
                     } else {
@@ -59,7 +61,7 @@ class DiceRoll {
                 System.out.println("player1 er vundet");
             } else if (player2 >= 40) {
                 System.out.println("player2 er vundet");
-            }
+            } // udråber vineren.
 
         }
         s.close();
