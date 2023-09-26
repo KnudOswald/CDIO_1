@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-class diceRoll {
+class DiceRoll {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         Random rand = new Random();
@@ -16,7 +16,7 @@ class diceRoll {
         s.nextLine();
 
         while (player1 < 40 && player2 < 40) {
-            System.out.println("det er player" + turn + "s tur");
+            System.out.println("det er player" + turn + " s tur");
 
             System.out.println("det er dit tur tryk på enter");
             s.nextLine();
@@ -27,30 +27,36 @@ class diceRoll {
             int dice2 = rand.nextInt(6) + 1;
             System.out.println("du har scoret: " + dice2);
 
+            dice1 = 1;
+            dice2 = 1;
+
             int sum = dice1 + dice2;
 
-            System.out.println("summet er: " + sum);
+            // System.out.println("summet er: " + sum);
 
             if (!(dice1 == 6 && dice2 == 6)) {
                 if (turn == 1) {
-                    turn = 2;
+                    if (dice1 == 1 && dice2 == 1) {
+                        sum = 0;
+                        System.out.println("du har mistede alt dit pointer");
+                        turn = 2;
+                    } else {
+                        turn = 2;
+                    }
                     player1 += sum;
                     System.out.println(" du har: " + player1 + "pionte");
                 } else {
-                    turn = 1;
+                    if (dice1 == 1 && dice2 == 1) {
+                        sum = 0;
+                        System.out.println("du har mistede alt dit pointer");
+                        turn = 1;
+                    } else {
+                        turn = 1;
+                    }
                     player2 += sum;
-                    System.out.println("du har: " + player2 + "pionte");
+                    System.out.println("du har: " + player2 + " pionte");
                 }
 
-            }
-            if (dice1 == 1 && dice2 == 1) {
-                if (turn == 1) {
-                    player1 = 0;
-                    System.out.println("du har mistede alt dit pointer");
-                } else {
-                    player2 = 0;
-                    System.out.println("du har mistede alt dit pointer.");
-                }
             }
             if (player1 >= 40) {
                 System.out.println("player1 er vundet");
@@ -61,5 +67,4 @@ class diceRoll {
         }
         s.close();
     }
-
 }
