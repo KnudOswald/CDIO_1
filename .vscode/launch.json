@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "DiceRoll",
+            "request": "launch",
+            "mainClass": "DiceRoll",
+            "projectName": "CDIO_1-2_473c3956"
+        },
+        {
             "name": "Java",
             "type": "java",
             "request": "launch",
