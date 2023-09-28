@@ -58,18 +58,19 @@ class DiceRoll {
                         System.out.println("Du har mistede alle dine point");
                         turn = 1;
                     } else {
+                        player2 += sum;
                         turn = 1;
                     }
                     player2 += sum;
                     System.out.println("Du har nu: " + player2 + " pionts" + "\n");
-                }    
+                }
             }
-            //det der gør at den skifter navn ved tur skifte hver gang
-            if (spillerTur.equals(navn1)){
-            spillerTur = navn2;
+            // det der gør at den skifter navn ved tur skifte hver gang
+            if (spillerTur.equals(navn1)) {
+                spillerTur = navn2;
             } else {
-            spillerTur = navn1;
-        }
+                spillerTur = navn1;
+            }
             if (player1 >= 40) {
                 System.out.println("Vinderne er: " + navn1);
             } else if (player2 >= 40) {
