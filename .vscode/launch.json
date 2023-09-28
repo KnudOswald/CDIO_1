@@ -9,6 +9,13 @@
             "name": "DiceRoll",
             "request": "launch",
             "mainClass": "DiceRoll",
+            "projectName": "CDIO_1_5e0f9e84"
+        },
+        {
+            "type": "java",
+            "name": "DiceRoll",
+            "request": "launch",
+            "mainClass": "DiceRoll",
             "projectName": "CDIO_1-2_473c3956"
         },
         {
